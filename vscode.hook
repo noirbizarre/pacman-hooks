@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type=Package
+Target=visual-studio-code-bin
+
+[Action]
+Description=Patch VSCode launcher to use wayland
+When=PostTransaction
+Exec=/etc/pacman.d/hooks/vscode.patch.sh
